@@ -1,0 +1,31 @@
+<rspec xmlns:client="http://www.protogeni.net/resources/rspec/ext/client/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.geni.net/resources/rspec/3" xsi:schemaLocation="http://www.geni.net/resources/rspec/3 http://www.geni.net/resources/rspec/3/manifest.xsd" type="manifest" expires="2019-06-11T01:52:23Z">
+  <node client_id="client0" exclusive="true" component_id="urn:publicid:IDN+wisc.cloudlab.us+node+c220g5-110530" component_manager_id="urn:publicid:IDN+wisc.cloudlab.us+authority+cm" sliver_id="urn:publicid:IDN+wisc.cloudlab.us+sliver+271900">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+wisc.cloudlab.us+image+emulab-ops//UBUNTU18-64-STD"/>
+    </sliver_type>
+    <hardware_type name="c220g5"/>
+    <rs:vnode xmlns:rs="http://www.protogeni.net/resources/rspec/ext/emulab/1" name="c220g5-110530" hardware_type="c220g5"/>
+    <host name="client0.popper-test1.skyhook-PG0.wisc.cloudlab.us" ipv4="128.105.144.136"/>
+    <services>
+      <login authentication="ssh-keys" hostname="c220g5-110530.wisc.cloudlab.us" port="22" username="kat"/>
+      <rs:console xmlns:rs="http://www.protogeni.net/resources/rspec/ext/emulab/1" server="boss.wisc.cloudlab.us"/>
+      <rs:recovery xmlns:rs="http://www.protogeni.net/resources/rspec/ext/emulab/1" available="true"/>
+    </services>
+  </node>
+  <node client_id="osd0" exclusive="true" component_id="urn:publicid:IDN+wisc.cloudlab.us+node+c220g5-110528" component_manager_id="urn:publicid:IDN+wisc.cloudlab.us+authority+cm" sliver_id="urn:publicid:IDN+wisc.cloudlab.us+sliver+271901">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+wisc.cloudlab.us+image+emulab-ops//UBUNTU18-64-STD"/>
+    </sliver_type>
+    <hardware_type name="c220g5"/>
+    <rs:vnode xmlns:rs="http://www.protogeni.net/resources/rspec/ext/emulab/1" name="c220g5-110528" hardware_type="c220g5"/>
+    <host name="osd0.popper-test1.skyhook-PG0.wisc.cloudlab.us" ipv4="128.105.144.134"/>
+    <services>
+      <login authentication="ssh-keys" hostname="c220g5-110528.wisc.cloudlab.us" port="22" username="kat"/>
+      <rs:console xmlns:rs="http://www.protogeni.net/resources/rspec/ext/emulab/1" server="boss.wisc.cloudlab.us"/>
+      <rs:recovery xmlns:rs="http://www.protogeni.net/resources/rspec/ext/emulab/1" available="true"/>
+    </services>
+  </node>
+  <rs:site_info xmlns:rs="http://www.protogeni.net/resources/rspec/ext/site-info/1">
+    <rs:location country="US" latitude="43.0667" longitude="89.4000"/>
+  </rs:site_info>
+</rspec>

@@ -1,0 +1,3 @@
+client0 ansible_host=client0.popper-test1.skyhook-PG0.wisc.cloudlab.us ansible_user=kat ansible_become=True
+osd0 ansible_host=osd0.popper-test1.skyhook-PG0.wisc.cloudlab.us ansible_user=kat ansible_become=True
+

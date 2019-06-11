@@ -1,0 +1,45 @@
+---
+- hosts: all
+  roles:
+    - basic
+
+#- hosts: clients
+#  vars:
+#    local_home: "{{ lookup('env','HOME') }}"
+#  roles:
+#    - clients
+#
+#- hosts: all
+#  roles:
+#    - final
+#
+#- hosts: clients
+#  tasks:
+#    - name: "setup skyhook repo"
+#      shell: |
+#        cd /mnt/sda4/skyhook-ceph ;
+#        git checkout {{ skyhook_branch | default( 'skyhook-luminous' ) }} ;
+#
+#    - name: "running install-deps"
+#      shell: |
+#        cd /mnt/sda4/skyhook-ceph ;
+#        ./install-deps.sh ;
+#    
+#    - name: "running do_cmake"
+#      shell: |
+#        cd /mnt/sda4/skyhook-ceph ;
+#        ./do_cmake.sh ;
+#    
+#    - name: "make run-query"
+#      shell: |
+#        cd /mnt/sda4/skyhook-ceph/build ;
+#        make run-query ;
+#    
+#    - name: "test run-query"
+#      shell: |
+#        cd /mnt/sda4/skyhook-ceph/build ;
+#        rados mkpool tpchflatbuf ;
+#        ceph osd pool set tpchflatbuf size 1 ;
+#        cp /proj/skyhook-PG0/kat_stuff/skyhookdb.testdb.lineitem.oid* . ;
+#        yes | PATH=$PATH:bin ../src/progly/rados-store-glob.sh tpchflatbuf  skyhookdb.testdb.lineitem.oid.* ;
+#        bin/run-query --num-objs 2 --pool tpchflatbuf --wthreads 1 --qdepth 10 --query flatbuf --select "orderkey,lt,5;linenumber,gt,5;tax,leq,1.01;"  --project-cols orderkey,linenumber,tax,comment --use-cls ;
