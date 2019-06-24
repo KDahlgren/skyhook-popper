@@ -12,8 +12,8 @@ def baremetal_node(name, img, hardware_type):
     return node
 
 
-experiment_name = 'popper-test1'
-img = "urn:publicid:IDN+wisc.cloudlab.us+image+emulab-ops//UBUNTU18-64-STD"
+experiment_name = 'popper-test4'
+img = "urn:publicid:IDN+wisconsin.cloudlab.us+image+emulab-ops//UBUNTU18-64-STD"
 
 request = pg.Request()
 request.addResource(baremetal_node("client0", img, 'c220g5'))
@@ -29,8 +29,8 @@ util.createSlice(ctx, experiment_name, renew_if_exists=True)
 manifest = util.createSliver(ctx, cloudlab.Wisconsin, experiment_name, request)
 
 # output files: ansible inventory and GENI manifest
-# {
+{
 outdir = os.path.dirname(os.path.realpath(__file__))
 util.toAnsibleInventory(manifest, hostsfile=outdir+'/hosts')
 manifest.writeXML(outdir+'/manifest.xml')
-# }
+}

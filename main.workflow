@@ -28,7 +28,7 @@ action "run test" {
   needs = "request resources"
   uses = "popperized/ansible@master"
   args = [
-    "-i", "ansible/hosts",
+    "-i", "geni/hosts",
     "ansible/playbook.yml"
   ]
   env = {
