@@ -29,6 +29,7 @@ action "run test" {
   uses = "popperized/ansible@master"
   args = [
     "-i", "geni/hosts",
+    "--extra-vars", "ansible/extra_vars.yml",
     "ansible/playbook.yml"
   ]
   env = {
