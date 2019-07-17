@@ -2,10 +2,10 @@
 
 ## Installation
 1. Install:
-  - git
-  - docker
-  - base64
-  - popper
+  - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  - [docker](https://docs.docker.com/docker-for-mac/install/)
+  - [base64](https://formulae.brew.sh/formula/base64)
+  - [popper](https://github.com/systemslab/popper)
 2. Setup your CloudLab environment variables.
 3. `git clone https://github.com/KDahlgren/skyhook-popper.git`
 4. `cd skyhook-popper`
