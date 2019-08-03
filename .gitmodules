@@ -1,3 +1,6 @@
 [submodule "skyhook-ansible"]
 	path = skyhook-ansible
 	url = https://github.com/KDahlgren/skyhook-ansible.git
+[submodule "ceph-deploy-ansible"]
+	path = ceph-deploy-ansible
+	url = https://github.com/KDahlgren/ceph-deploy-ansible.git

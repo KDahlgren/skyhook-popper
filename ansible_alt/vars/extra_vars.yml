@@ -1,8 +1,0 @@
----
-format_username: kat
-num_osds: 1 
-format_device: sda4 
-release_name: luminous 
-so_path: /proj/skyhook-PG0/kat_stuff/libcls_tabular.so.1.0.0 
-ceph_conf: ceph.conf_osize128_wsize256 
-osd_device_path: /dev/sdb skyhook_branch=skyhook-transforms

@@ -29,8 +29,8 @@ action "run test" {
   uses = "popperized/ansible@master"
   args = [
     "-i", "geni/hosts",
-    "--extra-vars", "skyhook-ansible/ansible/extra_vars.yml",
-    "skyhook-ansible/ansible/playbook.yml"
+    "--extra-vars", "ceph-deploy-ansible/ansible/extra_vars.yml",
+    "ceph-deploy-ansible/ansible/playbook.yml"
   ]
   env = {
     ANSIBLE_HOST_KEY_CHECKING = "False"
