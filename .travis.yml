@@ -1,5 +1,5 @@
 ---
 install:
-- git clone https://github.com/KDahlgren/skyhook-popper /tmp/popper
+- git clone https://github.com/KDahlgren/skyhook-popper /tmp/skyhook-popper
 script:
   echo "blah" ;
