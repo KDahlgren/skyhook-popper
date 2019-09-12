@@ -1,4 +1,6 @@
 ---
+dist: ubuntu
+language: bash
 install:
 - git clone https://github.com/KDahlgren/skyhook-popper /tmp/skyhook-popper
 script:
