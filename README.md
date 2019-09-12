@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/KDahlgren/skyhook-popper.svg?branch=master)](https://travis-ci.com/KDahlgren/skyhook-popper)
+<br />
+
 # skyhook-popper
 
 ## Installation
