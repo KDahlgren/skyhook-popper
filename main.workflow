@@ -1,6 +1,6 @@
 workflow "run test" {
   on = "push"
-  resolves = "teardown"
+  resolves = "teardown 4osds"
 }
 
 action "build context" {
@@ -17,20 +17,19 @@ action "build context" {
   ]
 }
 
-action "request resources" {
+action "request resources 4osds" {
   needs = "build context"
   uses = "popperized/geni/exec@master"
-  args = "geni/request.py"
+  args = "geni/request_4.py"
   secrets = ["GENI_KEY_PASSPHRASE"]
 }
 
-action "run test" {
-  needs = "request resources"
+action "run experiments 4osds" {
+  needs = "request resources 4osds"
   uses = "popperized/ansible@master"
   args = [
-    "-i", "geni/hosts",
-    "--extra-vars", "ceph-deploy-ansible/ansible/extra_vars.yml",
-    "ceph-deploy-ansible/ansible/playbook.yml"
+    "-i", "geni/hosts.ini",
+    "lib/skyhook-ansible/ansible/setup_playbook.yml"
   ]
   env = {
     ANSIBLE_HOST_KEY_CHECKING = "False"
@@ -38,9 +37,36 @@ action "run test" {
   secrets = ["ANSIBLE_SSH_KEY_DATA"]
 }
 
-action "teardown" {
-  needs = "run test"
+action "teardown 4osds" {
+  needs = "run experiments 4osds"
   uses = "popperized/geni/exec@master"
   args = "geni/release.py"
   secrets = ["GENI_KEY_PASSPHRASE"]
 }
+
+#action "request resources 8osds" {
+#  needs = "build context"
+#  uses = "popperized/geni/exec@master"
+#  args = "geni/request_8.py"
+#  secrets = ["GENI_KEY_PASSPHRASE"]
+#}
+#
+#action "run experiments 8osds" {
+#  needs = "request resources 8osds"
+#  uses = "popperized/ansible@master"
+#  args = [
+#    "-i", "geni/hosts.ini",
+#    "lib/skyhook-ansible/ansible/setup_playbook.yml"
+#  ]
+#  env = {
+#    ANSIBLE_HOST_KEY_CHECKING = "False"
+#  }
+#  secrets = ["ANSIBLE_SSH_KEY_DATA"]
+#}
+#
+#action "teardown 8osds" {
+#  needs = "run experiments 8osds"
+#  uses = "popperized/geni/exec@master"
+#  args = "geni/release.py"
+#  secrets = ["GENI_KEY_PASSPHRASE"]
+#}

@@ -1,0 +1,23 @@
+- name: "make /etc/ceph/ on osd and copy ceph.conf from client0"
+  shell: |
+    if test -d /etc/ceph; then sudo rm -rf /etc/ceph/ ; fi;
+    sudo mkdir /etc/ceph/ ;
+    sudo scp -o StrictHostKeyChecking=no client0:/etc/ceph/ceph.conf /etc/ceph/ ;
+
+- name: "clean up dirs"
+  shell: |
+    yes | sudo apt-get install xfsprogs ;
+    if test -d "/var/lib/ceph/osd/ceph-{{ groups['osds'].index(inventory_hostname) }}"; then sudo rm -rf "/var/lib/ceph/osd/ceph-{{ groups['osds'].index(inventory_hostname) }}" ; fi;
+    sudo mkdir -p "/var/lib/ceph/osd/ceph-{{ groups['osds'].index(inventory_hostname) }}" ;
+
+- name: "wipe osd drive"
+  shell: |
+    sudo wipefs -a "/dev/{{ osd_dev_name }}" ;
+    #sudo mkfs -t xfs -f "/dev/{{ osd_dev_name }}" ; #also valid
+    sudo mkfs -t ext4 "/dev/{{ osd_dev_name }}" ;
+    sudo mount "/dev/{{ osd_dev_name }}" "/var/lib/ceph/osd/ceph-{{ groups['osds'].index(inventory_hostname) }}" ;
+
+- name: "spin up osd"
+  shell: |
+    sudo ceph-osd -i {{groups['osds'].index(inventory_hostname)}} --mkfs ;
+    sudo ceph-osd -i {{groups['osds'].index(inventory_hostname)}} ;

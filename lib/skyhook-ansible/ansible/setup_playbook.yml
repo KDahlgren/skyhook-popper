@@ -1,0 +1,66 @@
+# e.g. time ansible-playbook setup_playbook.yml --extra-vars "vars_file=./vars/default_vars.yml" ;
+
+---
+# clone skyhook on each node, 
+# run install-deps, 
+# make the source code, 
+# install the generated tabular so.
+- hosts: all
+  become: True
+  vars:
+    local_home: "~"
+    this_user:  "{{ username }}"
+  vars_files:
+    - ./vars/default_vars.yml
+  environment:
+    DEBIAN_FRONTEND: noninteractive
+  roles:
+    - tasks_for_make_install
+
+# setup ceph on client
+- hosts: clients
+  become: True
+  vars:
+    local_home: "~"
+    this_user:  "{{ username }}"
+  vars_files:
+    - ./vars/default_vars.yml
+  roles:
+    - client_ceph
+
+# setup ceph on osds
+- hosts: osds
+  become: True
+  vars:
+    local_home: "~"
+    this_user:  "{{ username }}"
+  vars_files:
+    - ./vars/default_vars.yml
+  roles:
+    - osd_ceph
+
+# install postgres
+- hosts: clients
+  become: True
+  tasks:
+    - name: "install postgres on client0"
+      shell: |
+        sudo su -c "useradd postgres" ;
+        sudo su -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" >  /etc/apt/sources.list.d/pgdg.list' ;
+        sudo su -c "wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -" ;
+        sudo su -c "sudo apt-get update" ;
+        sudo su -c "yes | apt-get install postgresql-10" ;
+        sudo su -c "yes | apt-get install postgresql-server-dev-10" ;
+        sudo su -c "yes | apt-get install postgresql-contrib" ;
+
+# fix owner bc running as root is annoying
+- hosts: clients
+  become: True
+  vars:
+    this_user:  "{{ username }}"
+  vars_files:
+    - ./vars/default_vars.yml
+  tasks:
+    - name: "fixing owner of build dir"
+      shell: |
+        sudo chown -R {{ this_user }} "/mnt/{{ repo_dev_name }}/skyhookdm-ceph" ;

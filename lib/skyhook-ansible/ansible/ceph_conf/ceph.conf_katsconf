@@ -1,0 +1,26 @@
+[global] 
+fsid = 297cb4ed-0da7-4c58-912f-448475bea7d6
+mon initial members = client0
+mon host = client0
+auth cluster required = none 
+auth service required = none 
+auth client required = none 
+osd pool default size = 1 
+osd pool default pg num = 32 
+osd pool default pgp num = 32 
+osd crush chooseleaf type = 1 
+ 
+[mon]
+mon allow pool delete = true
+
+[osd] 
+osd max write size = 480 #MB
+osd max object size = 512M #MB
+osd class load list = * 
+osd class default list = * 
+osd objectstore = bluestore 
+osd copyfrom max chunk = 25000000 #25MB
+debug osd = 25
+
+[osd.0]
+osd journal = /dev/sdb

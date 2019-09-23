@@ -1,0 +1,6 @@
+---
+repo_dev_name: sda4 
+osd_dev_name: sdb
+skyhook_branch: skyhook-pdsw19
+ceph_conf: ceph.conf_katsconf
+username: kat

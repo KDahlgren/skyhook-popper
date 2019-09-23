@@ -1,0 +1,639 @@
+10000
+lineitem.10MB.fbx
+3
+4
+lineitem
+using lineitem schema..
+Command ran: /mnt/sda4/skyhookdm-ceph/build/bin/run-query --select "*" --data-schema "0 4 1 0 ORDERKEY; 1 3 0 1 PARTKEY; 2 3 0 1 SUPPKEY; 3 4 1 0 LINENUMBER ; 4 12 0 1 QUANTITY ; 5 13 0 1 EXTENDEDPRICE ; 6 12 0 1 DISCOUNT ; 7 13 0 1 TAX ; 8 9 0 1 RETURNFLAG; 9 9 0 1 LINESTATUS;10 14 0 1 SHIPDATE;11 14 0 1 COMMITDATE ; 12 14 0 1 RECEIPTDATE; 13 15 0 1 SHIPINSTRUCT; 14 15 0 1 SHIPMODE;15 15 0 1 COMMENT" --num-objs 10000 --pool lineitem.10MB.fbx --wthreads 30 --qdepth 120 --quiet
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 101 remaining
+draining ios: 93 remaining
+draining ios: 85 remaining
+draining ios: 78 remaining
+draining ios: 71 remaining
+draining ios: 64 remaining
+draining ios: 58 remaining
+draining ios: 52 remaining
+draining ios: 46 remaining
+draining ios: 39 remaining
+draining ios: 33 remaining
+draining ios: 27 remaining
+draining ios: 21 remaining
+draining ios: 15 remaining
+draining ios: 9 remaining
+draining ios: 3 remaining
+total result row count: 750000000 / 750000000
+run=0, start=1567992450.078509915, end=1567992836.607462181, duration=0386.528952266
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 101 remaining
+draining ios: 93 remaining
+draining ios: 86 remaining
+draining ios: 79 remaining
+draining ios: 72 remaining
+draining ios: 65 remaining
+draining ios: 57 remaining
+draining ios: 50 remaining
+draining ios: 44 remaining
+draining ios: 37 remaining
+draining ios: 30 remaining
+draining ios: 23 remaining
+draining ios: 15 remaining
+draining ios: 8 remaining
+draining ios: 2 remaining
+total result row count: 750000000 / 750000000
+run=1, start=1567992842.935117648, end=1567993236.740007014, duration=0393.804889366
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 102 remaining
+draining ios: 93 remaining
+draining ios: 87 remaining
+draining ios: 81 remaining
+draining ios: 75 remaining
+draining ios: 69 remaining
+draining ios: 63 remaining
+draining ios: 57 remaining
+draining ios: 51 remaining
+draining ios: 45 remaining
+draining ios: 38 remaining
+draining ios: 33 remaining
+draining ios: 26 remaining
+draining ios: 20 remaining
+draining ios: 15 remaining
+draining ios: 8 remaining
+draining ios: 2 remaining
+total result row count: 750000000 / 750000000
+run=2, start=1567993243.039513667, end=1567993641.091379328, duration=0398.051865661
+Total Duration: 1178.385707293
+Average Runtime: 392.795235764
+Command ran: /mnt/sda4/skyhookdm-ceph/build/bin/run-query --select "extendedprice,gt,91350" --data-schema "0 4 1 0 ORDERKEY; 1 3 0 1 PARTKEY; 2 3 0 1 SUPPKEY; 3 4 1 0 LINENUMBER ; 4 12 0 1 QUANTITY ; 5 13 0 1 EXTENDEDPRICE ; 6 12 0 1 DISCOUNT ; 7 13 0 1 TAX ; 8 9 0 1 RETURNFLAG; 9 9 0 1 LINESTATUS;10 14 0 1 SHIPDATE;11 14 0 1 COMMITDATE ; 12 14 0 1 RECEIPTDATE; 13 15 0 1 SHIPINSTRUCT; 14 15 0 1 SHIPMODE;15 15 0 1 COMMENT" --num-objs 10000 --pool lineitem.10MB.fbx --wthreads 30 --qdepth 120 --quiet
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 101 remaining
+draining ios: 93 remaining
+draining ios: 87 remaining
+draining ios: 81 remaining
+draining ios: 75 remaining
+draining ios: 69 remaining
+draining ios: 63 remaining
+draining ios: 57 remaining
+draining ios: 51 remaining
+draining ios: 45 remaining
+draining ios: 39 remaining
+draining ios: 33 remaining
+draining ios: 27 remaining
+draining ios: 21 remaining
+draining ios: 15 remaining
+draining ios: 9 remaining
+draining ios: 3 remaining
+total result row count: 7510000 / 750000000
+run=0, start=1567993647.391233376, end=1567994046.708553809, duration=0399.317320433
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 102 remaining
+draining ios: 93 remaining
+draining ios: 87 remaining
+draining ios: 80 remaining
+draining ios: 72 remaining
+draining ios: 65 remaining
+draining ios: 58 remaining
+draining ios: 50 remaining
+draining ios: 43 remaining
+draining ios: 36 remaining
+draining ios: 30 remaining
+draining ios: 24 remaining
+draining ios: 18 remaining
+draining ios: 12 remaining
+draining ios: 6 remaining
+total result row count: 7510000 / 750000000
+run=1, start=1567994053.019381867, end=1567994451.961305012, duration=0398.941923145
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 101 remaining
+draining ios: 95 remaining
+draining ios: 89 remaining
+draining ios: 83 remaining
+draining ios: 77 remaining
+draining ios: 71 remaining
+draining ios: 65 remaining
+draining ios: 59 remaining
+draining ios: 53 remaining
+draining ios: 47 remaining
+draining ios: 41 remaining
+draining ios: 35 remaining
+draining ios: 29 remaining
+draining ios: 23 remaining
+draining ios: 17 remaining
+draining ios: 11 remaining
+draining ios: 5 remaining
+total result row count: 7510000 / 750000000
+run=2, start=1567994458.233722998, end=1567994860.657255837, duration=0402.423532839
+Total Duration: 1200.682776417
+Average Runtime: 400.227592139
+Command ran: /mnt/sda4/skyhookdm-ceph/build/bin/run-query --select "extendedprice,gt,91350" --data-schema "0 4 1 0 ORDERKEY; 1 3 0 1 PARTKEY; 2 3 0 1 SUPPKEY; 3 4 1 0 LINENUMBER ; 4 12 0 1 QUANTITY ; 5 13 0 1 EXTENDEDPRICE ; 6 12 0 1 DISCOUNT ; 7 13 0 1 TAX ; 8 9 0 1 RETURNFLAG; 9 9 0 1 LINESTATUS;10 14 0 1 SHIPDATE;11 14 0 1 COMMITDATE ; 12 14 0 1 RECEIPTDATE; 13 15 0 1 SHIPINSTRUCT; 14 15 0 1 SHIPMODE;15 15 0 1 COMMENT" --use-cls --num-objs 10000 --pool lineitem.10MB.fbx --wthreads 30 --qdepth 120 --quiet
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 103 remaining
+draining ios: 94 remaining
+draining ios: 88 remaining
+draining ios: 82 remaining
+draining ios: 74 remaining
+draining ios: 68 remaining
+draining ios: 62 remaining
+draining ios: 54 remaining
+draining ios: 48 remaining
+draining ios: 41 remaining
+draining ios: 34 remaining
+draining ios: 27 remaining
+draining ios: 22 remaining
+draining ios: 16 remaining
+draining ios: 11 remaining
+draining ios: 6 remaining
+total result row count: 7510000 / 7510000
+run=0, start=1567994866.922918989, end=1567995267.594282563, duration=0400.671363574
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 102 remaining
+draining ios: 95 remaining
+draining ios: 87 remaining
+draining ios: 80 remaining
+draining ios: 74 remaining
+draining ios: 68 remaining
+draining ios: 63 remaining
+draining ios: 58 remaining
+draining ios: 52 remaining
+draining ios: 47 remaining
+draining ios: 42 remaining
+draining ios: 36 remaining
+draining ios: 31 remaining
+draining ios: 26 remaining
+draining ios: 20 remaining
+draining ios: 15 remaining
+draining ios: 10 remaining
+draining ios: 5 remaining
+total result row count: 7510000 / 7510000
+run=1, start=1567995273.778929936, end=1567995676.448079338, duration=0402.669149402
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 103 remaining
+draining ios: 93 remaining
+draining ios: 86 remaining
+draining ios: 80 remaining
+draining ios: 73 remaining
+draining ios: 67 remaining
+draining ios: 62 remaining
+draining ios: 57 remaining
+draining ios: 51 remaining
+draining ios: 46 remaining
+draining ios: 41 remaining
+draining ios: 35 remaining
+draining ios: 30 remaining
+draining ios: 25 remaining
+draining ios: 19 remaining
+draining ios: 14 remaining
+draining ios: 9 remaining
+draining ios: 3 remaining
+total result row count: 7510000 / 7510000
+run=2, start=1567995682.627315182, end=1567996085.964701622, duration=0403.337386440
+Total Duration: 1206.677899416
+Average Runtime: 402.225966472
+Command ran: /mnt/sda4/skyhookdm-ceph/build/bin/run-query --select "extendedprice,gt,71000" --data-schema "0 4 1 0 ORDERKEY; 1 3 0 1 PARTKEY; 2 3 0 1 SUPPKEY; 3 4 1 0 LINENUMBER ; 4 12 0 1 QUANTITY ; 5 13 0 1 EXTENDEDPRICE ; 6 12 0 1 DISCOUNT ; 7 13 0 1 TAX ; 8 9 0 1 RETURNFLAG; 9 9 0 1 LINESTATUS;10 14 0 1 SHIPDATE;11 14 0 1 COMMITDATE ; 12 14 0 1 RECEIPTDATE; 13 15 0 1 SHIPINSTRUCT; 14 15 0 1 SHIPMODE;15 15 0 1 COMMENT" --num-objs 10000 --pool lineitem.10MB.fbx --wthreads 30 --qdepth 120 --quiet
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 101 remaining
+draining ios: 94 remaining
+draining ios: 87 remaining
+draining ios: 81 remaining
+draining ios: 75 remaining
+draining ios: 69 remaining
+draining ios: 63 remaining
+draining ios: 57 remaining
+draining ios: 51 remaining
+draining ios: 45 remaining
+draining ios: 39 remaining
+draining ios: 33 remaining
+draining ios: 27 remaining
+draining ios: 21 remaining
+draining ios: 15 remaining
+draining ios: 9 remaining
+draining ios: 3 remaining
+total result row count: 75500000 / 750000000
+run=0, start=1567996092.114416288, end=1567996493.146916877, duration=0401.032500589
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 100 remaining
+draining ios: 93 remaining
+draining ios: 85 remaining
+draining ios: 78 remaining
+draining ios: 70 remaining
+draining ios: 63 remaining
+draining ios: 56 remaining
+draining ios: 50 remaining
+draining ios: 44 remaining
+draining ios: 38 remaining
+draining ios: 31 remaining
+draining ios: 25 remaining
+draining ios: 19 remaining
+draining ios: 13 remaining
+draining ios: 7 remaining
+draining ios: 1 remaining
+total result row count: 75500000 / 750000000
+run=1, start=1567996499.258849486, end=1567996899.603613526, duration=0400.344764040
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 103 remaining
+draining ios: 95 remaining
+draining ios: 87 remaining
+draining ios: 80 remaining
+draining ios: 73 remaining
+draining ios: 64 remaining
+draining ios: 58 remaining
+draining ios: 50 remaining
+draining ios: 42 remaining
+draining ios: 36 remaining
+draining ios: 30 remaining
+draining ios: 24 remaining
+draining ios: 18 remaining
+draining ios: 12 remaining
+draining ios: 6 remaining
+total result row count: 75500000 / 750000000
+run=2, start=1567996905.789392591, end=1567997305.876103203, duration=0400.086710612
+Total Duration: 1201.463975241
+Average Runtime: 400.487991747
+Command ran: /mnt/sda4/skyhookdm-ceph/build/bin/run-query --select "extendedprice,gt,71000" --data-schema "0 4 1 0 ORDERKEY; 1 3 0 1 PARTKEY; 2 3 0 1 SUPPKEY; 3 4 1 0 LINENUMBER ; 4 12 0 1 QUANTITY ; 5 13 0 1 EXTENDEDPRICE ; 6 12 0 1 DISCOUNT ; 7 13 0 1 TAX ; 8 9 0 1 RETURNFLAG; 9 9 0 1 LINESTATUS;10 14 0 1 SHIPDATE;11 14 0 1 COMMITDATE ; 12 14 0 1 RECEIPTDATE; 13 15 0 1 SHIPINSTRUCT; 14 15 0 1 SHIPMODE;15 15 0 1 COMMENT" --use-cls --num-objs 10000 --pool lineitem.10MB.fbx --wthreads 30 --qdepth 120 --quiet
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 101 remaining
+draining ios: 93 remaining
+draining ios: 86 remaining
+draining ios: 78 remaining
+draining ios: 72 remaining
+draining ios: 66 remaining
+draining ios: 59 remaining
+draining ios: 52 remaining
+draining ios: 46 remaining
+draining ios: 40 remaining
+draining ios: 33 remaining
+draining ios: 26 remaining
+draining ios: 21 remaining
+draining ios: 16 remaining
+draining ios: 11 remaining
+draining ios: 6 remaining
+draining ios: 1 remaining
+total result row count: 75500000 / 75500000
+run=0, start=1567997312.016762147, end=1567997715.822473330, duration=0403.805711183
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 101 remaining
+draining ios: 94 remaining
+draining ios: 86 remaining
+draining ios: 79 remaining
+draining ios: 71 remaining
+draining ios: 65 remaining
+draining ios: 60 remaining
+draining ios: 55 remaining
+draining ios: 50 remaining
+draining ios: 45 remaining
+draining ios: 40 remaining
+draining ios: 35 remaining
+draining ios: 30 remaining
+draining ios: 25 remaining
+draining ios: 20 remaining
+draining ios: 15 remaining
+draining ios: 10 remaining
+draining ios: 5 remaining
+total result row count: 75500000 / 75500000
+run=1, start=1567997721.960664825, end=1567998126.057095266, duration=0404.096430441
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 104 remaining
+draining ios: 95 remaining
+draining ios: 90 remaining
+draining ios: 85 remaining
+draining ios: 80 remaining
+draining ios: 76 remaining
+draining ios: 71 remaining
+draining ios: 66 remaining
+draining ios: 61 remaining
+draining ios: 56 remaining
+draining ios: 51 remaining
+draining ios: 46 remaining
+draining ios: 41 remaining
+draining ios: 36 remaining
+draining ios: 31 remaining
+draining ios: 26 remaining
+draining ios: 21 remaining
+draining ios: 16 remaining
+draining ios: 11 remaining
+draining ios: 6 remaining
+draining ios: 1 remaining
+total result row count: 75500000 / 75500000
+run=2, start=1567998132.136868787, end=1567998539.935730895, duration=0407.798862108
+Total Duration: 1215.701003732
+Average Runtime: 405.233667910
+Command ran: /mnt/sda4/skyhookdm-ceph/build/bin/run-query --select "extendedprice,gt,0" --data-schema "0 4 1 0 ORDERKEY; 1 3 0 1 PARTKEY; 2 3 0 1 SUPPKEY; 3 4 1 0 LINENUMBER ; 4 12 0 1 QUANTITY ; 5 13 0 1 EXTENDEDPRICE ; 6 12 0 1 DISCOUNT ; 7 13 0 1 TAX ; 8 9 0 1 RETURNFLAG; 9 9 0 1 LINESTATUS;10 14 0 1 SHIPDATE;11 14 0 1 COMMITDATE ; 12 14 0 1 RECEIPTDATE; 13 15 0 1 SHIPINSTRUCT; 14 15 0 1 SHIPMODE;15 15 0 1 COMMENT" --num-objs 10000 --pool lineitem.10MB.fbx --wthreads 30 --qdepth 120 --quiet
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 101 remaining
+draining ios: 93 remaining
+draining ios: 86 remaining
+draining ios: 80 remaining
+draining ios: 71 remaining
+draining ios: 64 remaining
+draining ios: 58 remaining
+draining ios: 50 remaining
+draining ios: 44 remaining
+draining ios: 37 remaining
+draining ios: 31 remaining
+draining ios: 25 remaining
+draining ios: 19 remaining
+draining ios: 14 remaining
+draining ios: 7 remaining
+draining ios: 1 remaining
+total result row count: 750000000 / 750000000
+run=0, start=1567998546.061827089, end=1567998949.168469144, duration=0403.106642055
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 103 remaining
+draining ios: 94 remaining
+draining ios: 88 remaining
+draining ios: 79 remaining
+draining ios: 72 remaining
+draining ios: 66 remaining
+draining ios: 60 remaining
+draining ios: 54 remaining
+draining ios: 48 remaining
+draining ios: 42 remaining
+draining ios: 36 remaining
+draining ios: 30 remaining
+draining ios: 24 remaining
+draining ios: 18 remaining
+draining ios: 12 remaining
+draining ios: 6 remaining
+total result row count: 750000000 / 750000000
+run=1, start=1567998955.248846798, end=1567999357.764885258, duration=0402.516038460
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 102 remaining
+draining ios: 94 remaining
+draining ios: 86 remaining
+draining ios: 79 remaining
+draining ios: 71 remaining
+draining ios: 65 remaining
+draining ios: 58 remaining
+draining ios: 51 remaining
+draining ios: 43 remaining
+draining ios: 36 remaining
+draining ios: 30 remaining
+draining ios: 23 remaining
+draining ios: 17 remaining
+draining ios: 12 remaining
+draining ios: 6 remaining
+total result row count: 750000000 / 750000000
+run=2, start=1567999363.868756915, end=1567999765.731277680, duration=0401.862520765
+Total Duration: 1207.485201280
+Average Runtime: 402.495067093
+Command ran: /mnt/sda4/skyhookdm-ceph/build/bin/run-query --select "extendedprice,gt,0" --data-schema "0 4 1 0 ORDERKEY; 1 3 0 1 PARTKEY; 2 3 0 1 SUPPKEY; 3 4 1 0 LINENUMBER ; 4 12 0 1 QUANTITY ; 5 13 0 1 EXTENDEDPRICE ; 6 12 0 1 DISCOUNT ; 7 13 0 1 TAX ; 8 9 0 1 RETURNFLAG; 9 9 0 1 LINESTATUS;10 14 0 1 SHIPDATE;11 14 0 1 COMMITDATE ; 12 14 0 1 RECEIPTDATE; 13 15 0 1 SHIPINSTRUCT; 14 15 0 1 SHIPMODE;15 15 0 1 COMMENT" --use-cls --num-objs 10000 --pool lineitem.10MB.fbx --wthreads 30 --qdepth 120 --quiet
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 101 remaining
+draining ios: 93 remaining
+draining ios: 86 remaining
+draining ios: 79 remaining
+draining ios: 75 remaining
+draining ios: 71 remaining
+draining ios: 65 remaining
+draining ios: 61 remaining
+draining ios: 58 remaining
+draining ios: 55 remaining
+draining ios: 52 remaining
+draining ios: 49 remaining
+draining ios: 46 remaining
+draining ios: 43 remaining
+draining ios: 40 remaining
+draining ios: 37 remaining
+draining ios: 34 remaining
+draining ios: 31 remaining
+draining ios: 28 remaining
+draining ios: 25 remaining
+draining ios: 22 remaining
+draining ios: 19 remaining
+draining ios: 16 remaining
+draining ios: 13 remaining
+draining ios: 10 remaining
+draining ios: 7 remaining
+draining ios: 4 remaining
+draining ios: 1 remaining
+total result row count: 750000000 / 750000000
+run=0, start=1567999771.869063381, end=1568000223.592166178, duration=0451.723102797
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 101 remaining
+draining ios: 92 remaining
+draining ios: 86 remaining
+draining ios: 82 remaining
+draining ios: 76 remaining
+draining ios: 72 remaining
+draining ios: 68 remaining
+draining ios: 63 remaining
+draining ios: 58 remaining
+draining ios: 54 remaining
+draining ios: 51 remaining
+draining ios: 48 remaining
+draining ios: 45 remaining
+draining ios: 42 remaining
+draining ios: 39 remaining
+draining ios: 36 remaining
+draining ios: 33 remaining
+draining ios: 30 remaining
+draining ios: 26 remaining
+draining ios: 24 remaining
+draining ios: 21 remaining
+draining ios: 18 remaining
+draining ios: 15 remaining
+draining ios: 12 remaining
+draining ios: 9 remaining
+draining ios: 6 remaining
+draining ios: 3 remaining
+total result row count: 750000000 / 750000000
+run=1, start=1568000229.701186916, end=1568000682.892886778, duration=0453.191699862
+clearing cache on osd0
+1
+clearing cache on osd1
+1
+clearing cache on osd2
+1
+clearing cache on osd3
+1
+draining ios: 120 remaining
+draining ios: 100 remaining
+draining ios: 92 remaining
+draining ios: 83 remaining
+draining ios: 76 remaining
+draining ios: 70 remaining
+draining ios: 64 remaining
+draining ios: 59 remaining
+draining ios: 56 remaining
+draining ios: 53 remaining
+draining ios: 50 remaining
+draining ios: 47 remaining
+draining ios: 44 remaining
+draining ios: 41 remaining
+draining ios: 38 remaining
+draining ios: 35 remaining
+draining ios: 32 remaining
+draining ios: 29 remaining
+draining ios: 26 remaining
+draining ios: 23 remaining
+draining ios: 20 remaining
+draining ios: 17 remaining
+draining ios: 14 remaining
+draining ios: 11 remaining
+draining ios: 8 remaining
+draining ios: 5 remaining
+draining ios: 2 remaining
+total result row count: 750000000 / 750000000
+run=2, start=1568000688.972732447, end=1568001139.934038608, duration=0450.961306161
+Total Duration: 1355.876108820
+Average Runtime: 451.958702940

@@ -1,0 +1,57 @@
+- name: "installing software"
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - vim
+    - tmux
+    - screen
+    - tkdiff
+    - dstat
+
+- name: "copy experiment helper scripts to build directory"
+  copy:
+    src: "{{ item }}"
+    dest: "{{ local_home }}"
+    mode: preserve
+  with_items:
+    - ./files/format-device.sh
+
+- name: "formatting device"
+  shell: |
+    cd {{ local_home }} ;
+    if df -h | grep -q sda4; then echo \"mounted, unmounting\"; sudo umount "/mnt/{{ repo_dev_name }}"; fi;
+    yes | sudo bash format-device.sh {{ this_user }} {{ repo_dev_name }} ;
+
+- name: "cloning repo"
+  shell: |
+    cd "/mnt/{{ repo_dev_name }}/" ;
+    git clone https://github.com/uccross/skyhookdm-ceph.git ;
+
+- name: "checking out branch {{ skyhook_branch }}"
+  shell: |
+    cd "/mnt/{{ repo_dev_name }}/skyhookdm-ceph" ;
+    git checkout {{ skyhook_branch }} ;
+
+- name: "running install deps"
+  shell: |
+    cd "/mnt/{{ repo_dev_name }}/skyhookdm-ceph" ;
+    sudo apt-get update ;
+    sudo ./install-deps.sh ;
+
+- name: "running do cmake"
+  shell: |
+    cd "/mnt/{{ repo_dev_name }}/skyhookdm-ceph" ;
+    ./do_cmake.sh -DCMAKE_INSTALL_PREFIX=/usr/ -DCMAKE_INSTALL_LIBDIR=/usr/lib/ ;
+
+- name: "compiling everything"
+  shell: |
+    cd "/mnt/{{ repo_dev_name }}/skyhookdm-ceph/build/" ;
+    make -j 9 ;
+
+- name: "running make install"
+  shell: |
+    cd "/mnt/{{ repo_dev_name }}/skyhookdm-ceph/build/" ;
+    sudo make install ;
+    
+- name: "make ceph log directory"
+  shell: |
+    test -d /var/log/ceph || sudo mkdir /var/log/ceph ; #need to do this so logs collect in default location

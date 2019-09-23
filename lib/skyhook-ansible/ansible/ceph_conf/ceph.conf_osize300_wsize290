@@ -1,0 +1,28 @@
+osd pool default size = 1
+osd pool default min size = 1
+osd crush chooseleaf type = 0
+osd pool default pg num = 128
+osd pool default pgp num = 128
+mon_allow_pool_delete = true
+osd_class_load_list = *
+osd_class_default_list = *
+objecter_inflight_op_bytes = 2147483648
+enable experimental unrecoverable data corrupting features = *
+
+[osd]
+osd max write size = 290 #The maximum size of a write in megabytes.
+osd max object size = 300000000 #The maximum size of a RADOS object in bytes.
+debug ms = 1
+debug osd = 25
+debug objecter = 20
+debug monc = 20
+debug mgrc = 20
+debug journal = 20
+debug filestore = 20
+debug bluestore = 30
+debug bluefs = 20
+debug rocksdb = 10
+debug bdev = 20
+debug rgw = 20
+debug reserver = 10
+debug objclass = 20

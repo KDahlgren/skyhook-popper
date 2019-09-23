@@ -1,0 +1,40 @@
+- name: "set python path"
+  lineinfile:
+    dest: "{{ local_home }}/.profile"
+    regexp: 'export PYTHONPATH=$PYTHONPATH:/usr/lib/python2.7/site-packages'
+    state: absent
+
+- name: "set python path"
+  lineinfile:
+    dest: "{{ local_home }}/.profile"
+    line: 'export PYTHONPATH=$PYTHONPATH:/usr/lib/python2.7/site-packages'
+    insertafter: 'EOF'
+    state: present
+
+- name: "source .profile"
+  shell: |
+    . "{{ local_home }}/.profile" ;
+  args:
+    executable: /bin/bash
+
+- name: "make /etc/ceph/ on client0"
+  shell: |
+    if test -d /etc/ceph; then sudo rm -rf /etc/ceph/ ; fi;
+    sudo mkdir /etc/ceph ;
+
+- name: "copy ceph.conf file"
+  copy:
+    src: "{{ local_home }}/skyhook-ansible/ansible/ceph_conf/{{ ceph_conf }}"
+    dest: "/etc/ceph/ceph.conf"
+    mode: preserve
+
+- name: "spin up monitor"
+  shell: |
+    if test -d /var/lib/ceph/mon ; then sudo rm -rf /var/lib/ceph/mon ; fi;
+    sudo mkdir -p /var/lib/ceph/mon ;
+    sudo ceph-mon -i client0 --mkfs ;
+    sudo ceph-mon -i client0 ;
+
+- name: "spin up manager"
+  shell: |
+    sudo ceph-mgr -i client0 ;

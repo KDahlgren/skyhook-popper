@@ -1,0 +1,7 @@
+---
+dist: bionic
+language: bash
+install:
+- git clone https://github.com/KDahlgren/skyhook-ansible /tmp/skyhook-ansible
+script:
+  echo "blah" ;
